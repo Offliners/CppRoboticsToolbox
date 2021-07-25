@@ -5,10 +5,6 @@ Using `C++ 11` to implement some simple robotics tools
 * CMake
 * Eigen
 
-## Development Log
-#### 2021/07/25 
-Implement DH Table to Transform Matrix
-
 ## Build
 ```shell
 $ mkdir build
@@ -23,3 +19,7 @@ $ make
 
 ## DH Table to Transform Matrix
 ![DH2TF demo](https://github.com/Offliners/CppRoboticsToolbox/blob/main/demo/DH2TF_demo.gif)
+
+## Development Log
+#### 2021/07/25 
+Implement DH Table to Transform Matrix
