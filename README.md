@@ -7,7 +7,7 @@ Using `C++ 11` to implement some simple robotics tools
 
 ## Development Log
 #### 2021/07/25 
-IDH Table to Transform Matrix
+Implement DH Table to Transform Matrix
 
 ## Build
 ```shell
