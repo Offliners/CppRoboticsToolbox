@@ -12,6 +12,7 @@ class Manipulator
         void title();
         ~Manipulator();
         void ShowDHTable();
+        void addOneJoint(int, double, double, double, double);
         void ShowTransformMatrix(int, int);
     private:
         std::vector<Link*> links_;
