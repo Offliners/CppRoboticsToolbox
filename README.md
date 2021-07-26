@@ -14,10 +14,11 @@ $ make
 ```
 
 ## Table of Contents
-* [Convet DH Table (Craig) to Transform Matrix](#dh-table-to-transform-matrix) 
+* [Convet DH Table (Craig) to Transform Matrix with manual input](#dh2tf) 
+* [Convet DH Table (Craig) to Transform Matrix with command line arguments](#dh)
+* [Convert angle to rotate matrix](#angleconverter)
 
-
-## DH Table to Transform Matrix
+## DH2TF
 ![DH2TF demo](https://github.com/Offliners/CppRoboticsToolbox/blob/main/demo/DH2TF_demo.gif)
 
 ## Development Log
