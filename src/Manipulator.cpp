@@ -21,9 +21,14 @@ void Manipulator::addJoint(int n)
     }
 }
 
+void Manipulator::addOneJoint(int index, double alpha, double a, double d, double theta)
+{
+    links_.push_back(new Link(index, alpha, a, d, theta));
+}
+
 void Manipulator::title()
 {
-    std::cout << "=========================================" << std::endl
+    std::cout << "=================================================" << std::endl
               << "Index" 
               << std::setw(14) << std::setfill(' ') << "alpha(i-1)"
               << std::setw(10) << std::setfill(' ') << "a(i-1)"
