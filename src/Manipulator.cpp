@@ -26,6 +26,11 @@ void Manipulator::addOneJoint(int index, double alpha, double a, double d, doubl
     links_.push_back(new Link(index, alpha, a, d, theta));
 }
 
+bool Manipulator::checkValid(int n)
+{
+    return (n > links_.size()) ? true : false;
+}
+
 void Manipulator::title()
 {
     std::cout << "=================================================" << std::endl
@@ -57,6 +62,8 @@ void Manipulator::ShowTransformMatrix(int up, int down)
 {
     if(up > down)
         std::cout << "Error! Upper index must be less than lower index!" << std::endl;
+    else if(checkValid(down))
+        std::cout << "Error! The number you input is more than the total of the links!" << std::endl;
     else if(up + 1 == down)
         std::cout << *(links_[--down]) << std:: endl;
     else
