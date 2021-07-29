@@ -88,7 +88,7 @@ Input your select :
 
 `-f, --file` : File path of DH table (Please use txt file to record the table)
 
-##### Usage
+#### Usage
 ```
 $ ./bin/DH -h
 "DH" command arguments usage :
@@ -145,7 +145,7 @@ Input your select :
 
 `-s, --sequence` : The sequence of input angles(case insensitive)
 
-##### Usage
+#### Usage
 ```
 $ ./bin/AC -h
 "AC" command arguments usage :
