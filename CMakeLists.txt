@@ -35,3 +35,7 @@ target_link_libraries(DH Manipulator)
 add_executable(AngleConverter src/AngleConverter.cpp)
 target_link_libraries(AngleConverter Angle)
 
+###### AC #######
+add_executable(AC src/AC.cpp)
+target_link_libraries(AC ArgParser)
+target_link_libraries(AC Angle)

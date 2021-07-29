@@ -7,9 +7,6 @@
 
 using namespace std;
 
-void errorMsg(); 
-bool checkValid(const string&, int);
-
 class DH_ArgParser : ArgParser
 {
     public:
@@ -63,6 +60,9 @@ class DH_ArgParser : ArgParser
                     break;
                 case 1:
                     this->readFileAndShowTF();
+                default:
+                    this->errorMsg();
+                    break;
             }
         };
 
@@ -80,7 +80,7 @@ int main(int argc, char **argv)
 
     string tool_name = argv[0];
     vector<string> all_args;
-    DH_ArgParser arg(argc, argv, tool_name.erase(0, 2), opt);
+    DH_ArgParser arg(argc, argv, "DH", opt);
     
     arg.argFunction();
 
