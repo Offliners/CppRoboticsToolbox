@@ -19,24 +19,31 @@ Under the `build` folder :
 * `data` : all data in this folder
 
 ## Table of Contents
-* [Convet DH Table (Craig) to Transform Matrix with command line arguments](#dh)
-* [Convet DH Table (Craig) to Transform Matrix with manual input](#dh2tf) 
-* [Convert angle to rotate matrix](#angleconverter)
+* DH Table
+    - [Convet DH Table (Craig) to Transform Matrix with command line arguments](#dh)
+    - [Convet DH Table (Craig) to Transform Matrix with manual input](#dh2tf) 
+* Rotate Matrix
+    - [Convert angle to rotate with manual input](#angleconverter)
 
 ## DH
 * [dh_table](data/dh_table.txt)
-```txt
-0 0 0 15
--90 0 220 -40
-0 430 -90 -50
--90 0 430 30
-90 0 0 70
--90 0 0 25
+
+### Usage
+`-h, --help` : Print help and exit
+
+`-f, --file` : File path of DH table (Please use txt file to record the table)
+
+```shell
+$ ./bin/DH -f data/dh_table.txt 0 6
+Transform Matrix 6->0 : 
+  0.957  -0.199   0.209 699.877
+ -0.283  -0.791   0.542 322.117
+  0.057  -0.578  -0.814 276.399
+  0.000   0.000   0.000   1.000
 ```
-![DH demo](https://github.com/Offliners/CppRoboticsToolbox/blob/main/demo/DH_demo.gif)
 
 ## DH2TF
-![DH2TF demo](https://github.com/Offliners/CppRoboticsToolbox/blob/main/demo/DH2TF_demo.gif)
+Input the number of joints to build DH table, then input A and B (B frame relate to A frame) to show the Transform Matrix
 
 ## AngleConverter
-![AngleConverter demo](https://github.com/Offliners/CppRoboticsToolbox/blob/main/demo/AngleConverter_demo.gif)
+Input the angles and rotate method(euler or fixed) to show the rotate matrix
