@@ -19,13 +19,19 @@ add_library(Manipulator SHARED src/Manipulator.cpp)
 add_library(Angle SHARED src/Angle.cpp)
 add_library(ArgParser SHARED src/ArgParser.cpp)
 
-add_executable(DH2TF src/DH2TF.cpp)
-add_executable(AngleConverter src/AngleConverter.cpp)
-add_executable(DH src/DH.cpp)
-
-target_link_libraries(DH2TF Link)
 target_link_libraries(Manipulator Link)
+
+###### DH2DF #######
+add_executable(DH2TF src/DH2TF.cpp)
+target_link_libraries(DH2TF Link)
 target_link_libraries(DH2TF Manipulator)
-target_link_libraries(AngleConverter Angle)
+
+###### DH #######
+add_executable(DH src/DH.cpp)
 target_link_libraries(DH ArgParser)
 target_link_libraries(DH Manipulator)
+
+###### AngleConverter #######
+add_executable(AngleConverter src/AngleConverter.cpp)
+target_link_libraries(AngleConverter Angle)
+

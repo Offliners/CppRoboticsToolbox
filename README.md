@@ -13,6 +13,11 @@ $ cmake ..
 $ make
 ```
 
+Under the `build` folder :
+* `bin`  : all executable tools in this folder
+* `lib`  : all shared objects in this folder
+* `data` : all data in this folder
+
 ## Table of Contents
 * [Convet DH Table (Craig) to Transform Matrix with command line arguments](#dh)
 * [Convet DH Table (Craig) to Transform Matrix with manual input](#dh2tf) 
