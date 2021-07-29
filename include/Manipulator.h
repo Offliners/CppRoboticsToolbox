@@ -14,6 +14,7 @@ class Manipulator
         void ShowDHTable();
         void addOneJoint(int, double, double, double, double);
         void ShowTransformMatrix(int, int);
+        bool checkValid(int);
     private:
         std::vector<Link*> links_;
 };
