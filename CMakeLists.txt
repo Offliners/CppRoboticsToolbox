@@ -4,18 +4,24 @@ project(CppRoboticsToolbox)
 
 set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_CXX_FLAGS "-std=c++11")
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+
+execute_process(COMMAND cp -a ${PROJECT_SOURCE_DIR}/data ${PROJECT_BINARY_DIR}/data)
+
+###### Dependencies #######
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIR})
+include_directories(include)
 
 add_library(Link SHARED src/Link.cpp)
 add_library(Manipulator SHARED src/Manipulator.cpp)
 add_library(Angle SHARED src/Angle.cpp)
 add_library(ArgParser SHARED src/ArgParser.cpp)
 
-add_executable(DH2TF DH2TF.cpp)
-add_executable(AngleConverter AngleConverter.cpp)
-add_executable(DH DH.cpp)
-
-include_directories("/usr/include/eigen3")
-include_directories("./include/")
+add_executable(DH2TF src/DH2TF.cpp)
+add_executable(AngleConverter src/AngleConverter.cpp)
+add_executable(DH src/DH.cpp)
 
 target_link_libraries(DH2TF Link)
 target_link_libraries(Manipulator Link)
