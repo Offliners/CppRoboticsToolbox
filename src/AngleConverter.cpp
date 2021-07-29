@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 
 void menu()
 {
-    cout << "======+ Menu ======+" << endl
+    cout << "======= Menu =======" << endl
          << "1. Show angle format" << endl
          << "2. Input angles & Show Rotate Matrix" << endl
          << "3. Quit" << endl
